@@ -18,8 +18,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Home - Shipowners of France",
-  description: "The professional organization of French transport and maritime services companies.",
+  title: "CollegeGO - Future of Education",
+  description: "Your gateway to academic excellence and campus life.",
+  icons: {
+    icon: '/College/icon.svg',
+  },
 };
 
 export default function RootLayout({
