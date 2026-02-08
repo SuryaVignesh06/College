@@ -34,13 +34,13 @@ export function Hero() {
                 <div className="max-w-6xl overflow-hidden mb-8">
                     <span className={`
                 inline-block text-white/90 font-bold uppercase tracking-[0.2em] mb-4 transform transition-all duration-1000 delay-300
-                ${loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
+                ${loaded ? "translate-y-0 opacity-100" : "max-md:translate-y-0 max-md:opacity-100 md:translate-y-10 md:opacity-0"}
             `}>
                         Autonomous • NAAC A+ • NBA Accredited
                     </span>
                     <h1 className={`
                 text-white text-5xl md:text-7xl lg:text-9xl font-display font-bold leading-[1.05] tracking-tight transform transition-all duration-1000 ease-out drop-shadow-2xl
-                ${loaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
+                ${loaded ? "translate-y-0 opacity-100" : "max-md:translate-y-0 max-md:opacity-100 md:translate-y-20 md:opacity-0"}
             `}>
                         CollegeGO<br />
                         <span className="text-white">Institute</span>
@@ -49,7 +49,7 @@ export function Hero() {
 
                 <p className={`
             text-white/90 text-xl lg:text-2xl max-w-3xl mb-12 font-medium leading-relaxed transform transition-all duration-1000 delay-500 drop-shadow-md
-            ${loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
+            ${loaded ? "translate-y-0 opacity-100" : "max-md:translate-y-0 max-md:opacity-100 md:translate-y-10 md:opacity-0"}
          `}>
                     Empowering students with world-class infrastructure, <span className="font-bold text-white border-b-2 border-brand-red">67 LPA</span> highest package, and global opportunities.
                 </p>

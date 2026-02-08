@@ -79,7 +79,7 @@ export function KeyFigures() {
                             />
                             <motion.div
                                 style={{ backdropFilter: backdropBlur, WebkitBackdropFilter: backdropBlur }}
-                                className="absolute inset-0 bg-gradient-to-t from-brand-red/90 via-brand-red/40 to-transparent"
+                                className="absolute inset-0 bg-gradient-to-t from-brand-red/90 via-brand-red/40 to-transparent mobile-no-blur"
                             />
                             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
                                 <span className="text-6xl font-display font-bold block mb-2">1000+</span>
