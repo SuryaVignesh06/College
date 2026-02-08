@@ -130,6 +130,7 @@ const NAV_ITEMS = [
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const pathname = usePathname();
     const isHome = pathname === "/";
@@ -216,8 +217,13 @@ export function Header() {
                 {/* Right Section: Navigation & Actions */}
                 <div className={rightSectionClasses}>
                     <nav className="flex items-center gap-8 h-full">
-                        {NAV_ITEMS.map((item) => (
-                            <div key={item.label} className="group h-full flex items-center static">
+                        {NAV_ITEMS.map((item, index) => (
+                            <div
+                                key={item.label}
+                                className="group h-full flex items-center static"
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
+                            >
                                 <Link
                                     href={item.href}
                                     className={cn(navLinkClasses, scrolled ? "py-6" : "py-2")}
@@ -227,7 +233,8 @@ export function Header() {
 
                                 {/* Mega Menu Dropdown */}
                                 <div className={cn(
-                                    "absolute left-0 w-full bg-white shadow-2xl border-t-4 border-brand-red opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 -z-10 group-hover:z-40 overflow-hidden",
+                                    "absolute left-0 w-full bg-white shadow-2xl border-t-4 border-brand-red transition-all duration-300 transform -z-10 overflow-hidden",
+                                    hoveredIndex === index ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2",
                                     scrolled ? "top-[80px]" : "top-[100px] rounded-3xl w-[95%] left-[2.5%]"
                                 )}>
                                     <div className="container mx-auto px-8 py-12">
