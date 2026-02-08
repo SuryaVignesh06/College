@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import PageLayout from "@/components/page-layout";
 import { ArrowRight, Check, ChevronRight, User, Book, FileText, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -36,9 +37,9 @@ export default function AdmissionPortal() {
                         We have sent a confirmation email with further instructions regarding the entrance exam and counseling process.
                     </p>
                     <div className="flex justify-center gap-4">
-                        <button onClick={() => window.location.href = '/'} className="bg-dark-blue text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-brand-red transition-colors">
+                        <Link href="/" className="bg-dark-blue text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-brand-red transition-colors inline-block">
                             Return Home
-                        </button>
+                        </Link>
                         <button className="border border-gray-300 text-dark-blue px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-gray-50 transition-colors">
                             Download Application
                         </button>
