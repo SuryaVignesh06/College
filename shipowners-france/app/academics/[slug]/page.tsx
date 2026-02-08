@@ -256,7 +256,7 @@ export default function DepartmentPage({ params }: { params: Promise<{ slug: str
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {data.features.map((feature, i) => (
+                        {data.features.map((feature: any, i: number) => (
                             <motion.div
                                 key={i}
                                 className="bg-white p-8 border border-gray-100 hover:border-brand-red/30 hover:shadow-xl transition-all duration-300 group"
