@@ -1,0 +1,19 @@
+export const validSlugs = [
+    "school-of-engineering",
+    "school-of-business",
+    "school-of-arts",
+    "school-of-sciences",
+    "undergraduate",
+    "postgraduate",
+    "phd-programs",
+    "online-courses",
+    "cse",
+    "aiml",
+    "aids",
+    "it",
+    "ece",
+    "eee",
+    "civil",
+    "mech",
+    "default"
+];
