@@ -42,7 +42,7 @@ jobs:
         run: npx next build
 
       - name: Add .nojekyll file
-        run: touch ./shipowners-france/out/.nojekyll
+        run: touch ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
