@@ -20,7 +20,7 @@ export function KeyFigures() {
 
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20 items-start">
-                    <div className="lg:w-1/3 sticky top-32">
+                    <div className="lg:w-1/3 lg:sticky lg:top-32">
                         <span className="text-brand-red text-xs uppercase font-bold tracking-[0.2em] mb-6 block">
                             Placement Highlights
                         </span>
