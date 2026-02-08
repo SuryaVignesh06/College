@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@media (max-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 @theme {
   --color-dark-blue: #001060;
   --color-brand-red: #FF1500;

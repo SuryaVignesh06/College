@@ -206,7 +206,7 @@ export function Header() {
             <div className={navContainerClasses}>
 
                 {/* Left Section: Logo */}
-                <Link href="/" className="group z-50 relative">
+                <Link href="/" className="group z-50 relative" onClick={() => setIsMenuOpen(false)}>
                     <div className={leftSectionClasses}>
                         <div className={logoTextClasses}>
                             CollegeGO<br />Institute
@@ -341,12 +341,21 @@ export function Header() {
             )}>
                 <nav className="flex flex-col gap-6">
                     {NAV_ITEMS.map(item => (
-                        <Link key={item.label} href={item.href} className="text-2xl font-display font-bold text-white border-b border-white/10 pb-4">
+                        <Link
+                            key={item.label}
+                            href={item.href}
+                            className="text-2xl font-display font-bold text-white border-b border-white/10 pb-4"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
                             {item.label}
                         </Link>
                     ))}
                 </nav>
-                <Link href="/admissions/apply" className="bg-brand-red text-white text-center py-4 uppercase font-bold tracking-widest mt-auto mb-8 shadow-xl rounded-xl">
+                <Link
+                    href="/admissions/apply"
+                    className="bg-brand-red text-white text-center py-4 uppercase font-bold tracking-widest mt-auto mb-8 shadow-xl rounded-xl"
+                    onClick={() => setIsMenuOpen(false)}
+                >
                     Admission Portal
                 </Link>
             </div>
