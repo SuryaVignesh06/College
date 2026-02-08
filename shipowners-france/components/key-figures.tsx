@@ -1,7 +1,18 @@
+"use client";
 
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function KeyFigures() {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+
+    const backdropBlur = useTransform(scrollYProgress, [0, 0.5], ["blur(0px)", "blur(8px)"]);
+
     return (
         <section className="py-24 lg:py-32 bg-white relative">
             {/* Background Pattern */}
@@ -59,14 +70,17 @@ export function KeyFigures() {
                         </div>
 
                         {/* Stat 2 - Placements */}
-                        <div className="relative group overflow-hidden rounded-none aspect-[4/5] md:mt-12 shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <div ref={ref} className="relative group overflow-hidden rounded-none aspect-[4/5] md:mt-12 shadow-lg hover:shadow-2xl transition-all duration-500">
                             <Image
                                 src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop"
                                 alt="Placement Drive"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-brand-red/90 via-brand-red/40 to-transparent" />
+                            <motion.div
+                                style={{ backdropFilter: backdropBlur, WebkitBackdropFilter: backdropBlur }}
+                                className="absolute inset-0 bg-gradient-to-t from-brand-red/90 via-brand-red/40 to-transparent"
+                            />
                             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
                                 <span className="text-6xl font-display font-bold block mb-2">1000+</span>
                                 <h3 className="text-lg font-bold uppercase tracking-wide border-t border-white/20 pt-4 mt-2">
