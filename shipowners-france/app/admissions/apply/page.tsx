@@ -37,9 +37,9 @@ export default function AdmissionPortal() {
                         We have sent a confirmation email with further instructions regarding the entrance exam and counseling process.
                     </p>
                     <div className="flex justify-center gap-4">
-                        <Link href="/" className="bg-dark-blue text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-brand-red transition-colors inline-block">
+                        <button onClick={() => window.location.href = '/College/'} className="bg-dark-blue text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-brand-red transition-colors inline-block">
                             Return Home
-                        </Link>
+                        </button>
                         <button className="border border-gray-300 text-dark-blue px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-gray-50 transition-colors">
                             Download Application
                         </button>
